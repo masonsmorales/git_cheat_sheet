@@ -17,3 +17,6 @@
 | `git add --all` | Add all files that are not in .gitignore |
 | `git commit -m "commit message"` | Create a new commit |
 | `git log` | Log file of all commits |
+| `git reset --soft HEAD~3`| Remove the last 3 commits on the branch (does not lose changes, userful for squashing locally) |
+| `git push -f origin my_branch` | Force push `my_branch` (overwrites remote branch; useful after a local squash when remote was pushed but not squashed; resolves "Updates were rejected because the tip of your current branch is behind its remote counterpart") |
+| `git reset --hard origin/master && git pull -v --rebase origin master && git checkout master && git pull` | Discard all local changes and re-pull the master branch; useful in a `gitfix` bash alias |
