@@ -20,7 +20,7 @@
 | `git reset --soft HEAD~3`| Remove the last 3 commits on the branch (does not lose changes, userful for squashing locally) |
 | `git push -f origin my_branch` | Force push `my_branch` (overwrites remote branch; useful after a local squash when remote was pushed but not squashed; resolves "Updates were rejected because the tip of your current branch is behind its remote counterpart") |
 | `git reset --hard origin/master && git pull -v --rebase origin master && git checkout master && git pull` | Discard all local changes and re-pull the master branch; useful in a `gitfix` bash alias |
-| `git add -u` | Git add | Only adds currently tracked files (which have been modified) to the staging area and also checks if they have been deleted (if yes, they are removed from staging area). Does not stage new files |
+| `git add -u` | Only adds currently tracked files (which have been modified) to the staging area and also checks if they have been deleted (if yes, they are removed from staging area). Does not stage new files |
 | `git fetch && git rebase origin/main` | Rebases a feature branch onto the latest version of the main branch  |
 
 # Useful Git Configurations
