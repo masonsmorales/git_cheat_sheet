@@ -22,6 +22,7 @@
 | `git reset --hard origin/master && git pull -v --rebase origin master && git checkout master && git pull` | Discard all local changes and re-pull the master branch; useful in a `gitfix` bash alias |
 | `git add -u` | Only adds currently tracked files (which have been modified) to the staging area and also checks if they have been deleted (if yes, they are removed from staging area). Does not stage new files |
 | `git fetch && git rebase origin/main` | Rebases a feature branch onto the latest version of the main branch  |
+| `git checkout HEAD -- <file>` | Perform a hard reset of changes made to `file` back to `HEAD` |
 
 # Useful Git Configurations
 ## Global gitignore file
