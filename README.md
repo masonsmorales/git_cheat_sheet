@@ -21,7 +21,7 @@
 | `git push -f origin my_branch` | Force push `my_branch` (overwrites remote branch; useful after a local squash when remote was pushed but not squashed; resolves "Updates were rejected because the tip of your current branch is behind its remote counterpart") |
 | `git reset --hard origin/master && git pull -v --rebase origin master && git checkout master && git pull` | Discard all local changes and re-pull the master branch; useful in a `gitfix` bash alias |
 | `git add -u` | Only adds currently tracked files (which have been modified) to the staging area and also checks if they have been deleted (if yes, they are removed from staging area). Does not stage new files |
-| `git fetch && git rebase origin/main` | Rebases a feature branch onto the latest version of the main branch  |
+| `git fetch origin && git rebase origin/main` | Rebases a feature branch onto the latest version of the main branch  |
 | `git restore <file> [options]` | Unstage and/or discard local changes to a file |
 | `git checkout HEAD -- <file>` | Perform a hard reset of changes made to `file` back to `HEAD` |
 
