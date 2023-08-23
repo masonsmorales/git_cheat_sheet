@@ -50,4 +50,9 @@ Options:
 Create a `.gitattributes` file and add the following line:
 ```
 *.ipynb filter=strip-notebook-output`
-``` 
+```
+# Useful Bash Aliases
+gp - git push current branch to origin
+```
+alias gp='git push origin "$(git symbolic-ref --short HEAD)"'
+```
