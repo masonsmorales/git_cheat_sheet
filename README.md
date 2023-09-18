@@ -30,7 +30,7 @@
 ## Global gitignore file
 1. Pull your favorite gitignore files from https://github.com/github/gitignore and concatenate them into a new file at ~/.gitignore
 2. `git config --global core.excludesfile ~/.gitignore`
-3. You now have a global gitignore file! 
+3. You now have a global gitignore file!
 4. Note: You will probably still want to add a .gitignore file to the repos you are working on if multiple people are working on the repository.
 
 ## Use OSX Keychain for HTTPS Repo Auth
@@ -38,6 +38,8 @@
 
 ## Reuse Tokens from Web Auth for Git CLI Auth
 - https://github.com/git-ecosystem/git-credential-manager
+- `git config --global credential.interactive always`
+- `git config --global credential.useHttpPath true`
 
 ## Avoid Re-Entering GPG Key Passphrase for every Signed Commit (OSX)
 Options:
