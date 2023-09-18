@@ -24,6 +24,7 @@
 | `git fetch origin && git rebase origin/main` | Rebases a feature branch onto the latest version of the main branch  |
 | `git restore <file> [options]` | Unstage and/or discard local changes to a file |
 | `git checkout HEAD -- <file>` | Perform a hard reset of changes made to `file` back to `HEAD` |
+| `git config --list --show-origin` | Show all global git configurations and the file path of each config setting |
 
 # Useful Git Configurations
 ## Global gitignore file
