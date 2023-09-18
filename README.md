@@ -25,6 +25,7 @@
 | `git restore <file> [options]` | Unstage and/or discard local changes to a file |
 | `git checkout HEAD -- <file>` | Perform a hard reset of changes made to `file` back to `HEAD` |
 | `git config --list --show-origin` | Show all global git configurations and the file path of each config setting |
+| `git branch -D some_branch` | Delete some_branch locally |
 
 # Useful Git Configurations
 ## Global gitignore file
