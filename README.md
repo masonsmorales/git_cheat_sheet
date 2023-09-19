@@ -35,7 +35,7 @@
 4. Note: You will probably still want to add a .gitignore file to the repos you are working on if multiple people are working on the repository.
 
 ## Use OSX Keychain for HTTPS Repo Auth
-`git config --global credential.helper osxkeychain`
+- `git config --global credential.helper osxkeychain`
 
 ## Reuse Tokens from Web Auth for Git CLI Auth
 - https://github.com/git-ecosystem/git-credential-manager
@@ -49,6 +49,13 @@ Options:
 - pinentry-mac
   - https://gist.github.com/koshatul/2427643668d4e89c0086f297f9ed2130
   - https://unixb0y.de/blog/articles/2019-01/gpg-password-macos-keychain
+- `git config --global commit.gpgsign=true`
+- `git config --global gpg.program=gpg`
+- `git config --global user.signingkey=<gpg key>`
+
+## Configure Username and Email
+- `git config --global user.name "first_name last_name"`
+- `git config --global user.email "name@example.com"`
 
 ## Strip Python notebook output from git
 Create a `.gitattributes` file and add the following line:
