@@ -49,6 +49,8 @@ Options:
 - pinentry-mac
   - https://gist.github.com/koshatul/2427643668d4e89c0086f297f9ed2130
   - https://unixb0y.de/blog/articles/2019-01/gpg-password-macos-keychain
+- GitHub Doc: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
+- More useful info: https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data
 - `git config --global commit.gpgsign=true`
 - `git config --global gpg.program=gpg`
 - `git config --global user.signingkey=<gpg key>`
