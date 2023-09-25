@@ -26,7 +26,6 @@
 | `git checkout HEAD -- <file>` | Perform a hard reset of changes made to `file` back to `HEAD` |
 | `git config --list --show-origin` | Show all global git configurations and the file path of each config setting |
 | `git branch -D some_branch` | Delete some_branch locally |
-| `git ls-files | xargs wc -l` | Count the number of lines of code in the git repo |
 
 # Useful Git Configurations
 ## Global gitignore file
@@ -69,4 +68,9 @@ Create a `.gitattributes` file and add the following line:
 gp - git push current branch to origin
 ```
 alias gp='git push origin "$(git symbolic-ref --short HEAD)"'
+
+## Other Tips & Tricks
+Count the number of lines of code in the git repo
+```bash
+git ls-files | xargs wc -l
 ```
