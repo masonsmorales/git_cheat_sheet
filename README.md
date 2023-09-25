@@ -66,8 +66,9 @@ Create a `.gitattributes` file and add the following line:
 ```
 # Useful Bash Aliases
 gp - git push current branch to origin
-```
+```bash
 alias gp='git push origin "$(git symbolic-ref --short HEAD)"'
+```
 
 ## Other Tips & Tricks
 Count the number of lines of code in the git repo
