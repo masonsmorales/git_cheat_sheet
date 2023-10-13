@@ -71,7 +71,12 @@ alias gp='git push origin "$(git symbolic-ref --short HEAD)"'
 ```
 
 ## Other Tips & Tricks
-Count the number of lines of code in the git repo
+Count the number of lines of code in a git repo
 ```bash
-git ls-files | xargs wc -l
+git ls-files | xargs wc -l | sort
 ```
+Count the number of lines of Python code in a git repo
+```bash
+git ls-files | egrep '.py$' | xargs wc -l | sort
+```
+Or, to get the number of characters, use `wc -c`
