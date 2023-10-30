@@ -71,12 +71,27 @@ alias gp='git push origin "$(git symbolic-ref --short HEAD)"'
 ```
 
 ## Other Tips & Tricks
-Count the number of lines of code in a git repo
+### Count the number of lines of code in a git repo
 ```bash
 git ls-files | xargs wc -l | sort
 ```
-Count the number of lines of Python code in a git repo
+### Count the number of lines of Python code in a git repo
 ```bash
 git ls-files | egrep '.py$' | xargs wc -l | sort
 ```
 Or, to get the number of characters, use `wc -c`
+### Create a function to find all instances of a string in git-tracked files
+In `~/.bashrc`
+```bash
+# Create a function called "ggrep" (git grep)
+ggrep() {
+  if [ -z "$1" ]; then
+    echo "Usage: ggrep <pattern>
+    echo "Note: pattern supports Extended Regular Expressions (ERE)
+    echo "To add egrep args, such as `-i` or `-n` simply pass them with your pattern in double quotes,
+    echo "  e.g. ggrep "-n mypattern" or ggrep "mypattern -in" (order does not matter)
+  else
+    git ls-files | xargs egrep -n --color=auto $1
+  fi
+}
+```
