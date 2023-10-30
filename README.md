@@ -86,10 +86,10 @@ In `~/.bashrc`
 # Create a function called "ggrep" (git grep)
 ggrep() {
   if [ -z "$1" ]; then
-    echo "Usage: ggrep <pattern>
-    echo "Note: pattern supports Extended Regular Expressions (ERE)
-    echo "To add egrep args, such as `-i` or `-n` simply pass them with your pattern in double quotes,
-    echo "  e.g. ggrep "-n mypattern" or ggrep "mypattern -in" (order does not matter)
+    echo "Usage: ggrep <pattern>"
+    echo 'Note: pattern supports Extended Regular Expressions (ERE)'
+    echo 'To add egrep args, such as "-i" simply pass them with your pattern in double quotes,'
+    echo '  e.g. ggrep "-i mypattern" or ggrep "mypattern -i" (order does not matter)'
   else
     git ls-files | xargs egrep -n --color=auto $1
   fi
