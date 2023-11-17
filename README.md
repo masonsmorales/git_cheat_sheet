@@ -8,8 +8,9 @@
 | `git stash pop` | Apply your last stash |
 | `git stash list` | List stashes |
 | `git branch -m new_branch` | Rename current branch to new_branch |
-| `git format patch commit_hash` | Creates a patch files with the changes from that commit |
-| `git apply filename.patch` | Applies a patch file to the current branch |
+| `git diff > some_patch` | Save a working copy of your changes to a file called `some_patch` |
+| `git apply some_patch` | Applies the `some_patch` patch file to the current branch |
+| `git format-patch <commit_hash>` | Creates a patch file with the changes from that commit |
 | `git clone --single-branch --branch=master --bare clone_url` | Clones down a .git/ folder containing only the master branch |
 | `git clone url` | Clones a repo |
 | `git checkout -b branch_name` | Creates a new branch and switches to it |
@@ -26,6 +27,11 @@
 | `git checkout HEAD -- <file>` | Perform a hard reset of changes made to `file` back to `HEAD` |
 | `git config --list --show-origin` | Show all global git configurations and the file path of each config setting |
 | `git branch -D some_branch` | Delete some_branch locally |
+| `git stash push -m "my_stash_name"` | Stash changes by name |
+| `git stash list` | List stashes |
+| `git stash pop stash@{<n>}` | Pop the `n`th stash |
+| `git stash apply <i>` | Apply the stash with index `i` |
+| `git stash drop stash@{<n>}` | Delete/drop the `nth` stash |
 
 # Useful Git Configurations
 ## Global gitignore file
