@@ -36,6 +36,7 @@
 | `git stash pop stash@{<n>}` | Pop the `n`th stash |
 | `git stash apply <i>` | Apply the stash with index `i` |
 | `git stash drop stash@{<n>}` | Delete/drop the `nth` stash |
+| `git stash branch <branch_name> [<stash_index>]` | Creates a new branch from a stash and then drops the stash; if `stash_index` is not specified, uses the latest one | 
 
 # Useful Git Configurations
 ## Global gitignore file
