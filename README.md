@@ -3,10 +3,7 @@
 | ------------- |:-------------:| 
 | `git switch some_branch` | If some_branch exists on remote but not local, it will pull it from the local repo and switch to it |
 | `git reset HEAD~1` | Undo the previous commit but not the changes | 
-| `git stash` | Stash current uncommitted changes |
 | `git reset --hard origin/some_branch` | Destructive command to remove any uncommitted changes |
-| `git stash pop` | Apply your last stash |
-| `git stash list` | List stashes |
 | `git branch -m new_branch` | Rename current branch to new_branch |
 | `git diff > some_patch` | Save a working copy of your changes to a file called `some_patch` |
 | `git apply some_patch` | Applies the `some_patch` patch file to the current branch |
@@ -27,8 +24,15 @@
 | `git checkout HEAD -- <file>` | Perform a hard reset of changes made to `file` back to `HEAD` |
 | `git config --list --show-origin` | Show all global git configurations and the file path of each config setting |
 | `git branch -D some_branch` | Delete some_branch locally |
+| `git pull origin main --no-ff` | Merge changes from the main branch into your current branch |
+
+## Git Stash
+| Command        | Notes           | 
+| ------------- |:-------------:| 
+| `git stash` | Stash current uncommitted changes |
 | `git stash push -m "my_stash_name"` | Stash changes by name |
 | `git stash list` | List stashes |
+| `git stash pop` | Apply your last stash |
 | `git stash pop stash@{<n>}` | Pop the `n`th stash |
 | `git stash apply <i>` | Apply the stash with index `i` |
 | `git stash drop stash@{<n>}` | Delete/drop the `nth` stash |
