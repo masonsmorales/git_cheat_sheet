@@ -48,10 +48,11 @@
 ## Use OSX Keychain for HTTPS Repo Auth
 - `git config --global credential.helper osxkeychain`
 
-## Reuse Tokens from Web Auth for Git CLI Auth
+## Reuse Tokens from Web Auth for Git CLI Auth using GCM
 - https://github.com/git-ecosystem/git-credential-manager
 - `git config --global credential.interactive always`
 - `git config --global credential.useHttpPath true`
+- Issue with GCM? Try: `git-credential-manager-core diagnose`
 
 ## Avoid Re-Entering GPG Key Passphrase for every Signed Commit (OSX)
 Options:
