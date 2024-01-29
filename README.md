@@ -58,6 +58,7 @@
 Options:
 - [GPG Suite](https://gpgtools.org/) (recommended by [Github](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)/easiest)
   - Note: [GnuPG](https://www.gnupg.org/download/) is also recommended by [GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key) but it doesn't have a way to access the OSX keychain
+  - Bug with devcontainers not importing GPG keys: https://github.com/microsoft/vscode-remote-release/issues/9217
 - pinentry-mac
   - https://gist.github.com/koshatul/2427643668d4e89c0086f297f9ed2130
   - https://unixb0y.de/blog/articles/2019-01/gpg-password-macos-keychain
