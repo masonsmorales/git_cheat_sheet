@@ -25,6 +25,8 @@
 | `git config --list --show-origin` | Show all global git configurations and the file path of each config setting |
 | `git branch -D some_branch` | Delete some_branch locally |
 | `git pull origin main --no-ff` | Merge changes from the main branch into your current branch |
+| `git branch $(git rev-parse --abbrev-ref HEAD)--$(date "+%Y%m%d_%H%M") && git branch -a | grep -i $(git rev-parse --abbrev-ref HEAD)` | Create a backup copy of current branch |
+
 
 ## Git Stash
 | Command        | Notes           | 
