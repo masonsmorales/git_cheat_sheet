@@ -25,14 +25,19 @@
 | `git config --list --show-origin` | Show all global git configurations and the file path of each config setting |
 | `git branch -D some_branch` | Delete some_branch locally |
 | `git pull origin main --no-ff` | Merge changes from the main branch into your current branch |
-| `git branch $(git rev-parse --abbrev-ref HEAD)--$(date "+%Y%m%d_%H%M") && git branch -a | grep -i $(git rev-parse --abbrev-ref HEAD)` | Create a backup copy of current branch |
+
+## Backups
+Create a backup copy of current branch
+```bash
+git branch $(git rev-parse --abbrev-ref HEAD)--$(date "+%Y%m%d_%H%M") && git branch -a | grep -i $(git rev-parse --abbrev-ref HEAD)
+``` 
 
 
 ## Git Stash
 | Command        | Notes           | 
 | ------------- |:-------------:| 
-| `git stash` | Stash current uncommitted changes |
 | `git stash push -m "my_stash_name"` | Stash changes by name |
+| `git stash` | Stash current uncommitted changes |
 | `git stash list` | List stashes |
 | `git stash pop` | Apply your last stash |
 | `git stash pop stash@{<n>}` | Pop the `n`th stash |
@@ -80,7 +85,7 @@ Create a `.gitattributes` file and add the following line:
 *.ipynb filter=strip-notebook-output`
 ```
 # Useful Bash Aliases
-gp - git push current branch to origin
+`gp` - git push current branch to origin
 ```bash
 alias gp='git push origin "$(git symbolic-ref --short HEAD)"'
 ```
